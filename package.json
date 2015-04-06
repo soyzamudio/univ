@@ -1,0 +1,37 @@
+{
+  "name": "university",
+  "description": "University Application App",
+  "homepage": "https://github.com/soyzamudio/univ",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "keywords": [
+    "gulp",
+    "jshint",
+    "jscs",
+    "server",
+    "hapi",
+    "node",
+    "mongo",
+    "mongoose",
+    "angular"
+  ],
+  "author": "Jose Zamudio <jose@josezamudio.me>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/soyzamudio/univ.git"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server/index.js",
+    "localhost": "MONGO_URL=mongodb://localhost/angular-prototype-prod PORT=3333 nodemon -e js,jade server/index.js",
+    "preinstall": "rm -rf node_modules public",
+    "postinstall": "bower install && gulp build",
+    "test": "MONGO_URL=mongodb://localhost/angular-prototype-test lab -l -v -m 5000 test/unit test/acceptance"
+  },
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
